@@ -1,5 +1,100 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.hero{
+    width: 100%;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero__title{
+    color: var(--very-dark-blue);
+}
+h1{
+    font-weight: 200;
+    color: #808088;
+}
+span{
+    font-weight: 600;
+    color: var(--very-dark-blue);
+}
+.hero__text{
+    width: 40%;
+    text-align: center;
+    padding: 2em 0;
+    color: var(--grayish-blue);
+}
+.cards{
+    width: 80%;
+    margin: 0 auto;
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 25px 25px; 
+    grid-template-areas: 
+        ". . team team . ."
+        "supervisor supervisor team team calculator calculator"
+        "supervisor supervisor karma karma calculator calculator"
+        ". . karma karma . ."; 
+    justify-items: center; 
+    align-items: center;
+}
+.card{
+    width: 23em;
+    height: 17em;
+    border-radius: .5em;
+    padding: 2em;
+    -webkit-box-shadow: 0px 7px 9px 3px rgba(224,231,241,0.88); 
+    box-shadow: 0px 7px 9px 3px rgba(224,231,241,0.88);
+}
+.card__title{
+    color: var(--very-dark-blue);
+    padding-bottom: 12px;
+}
+.card__info{
+    color: var(--grayish-blue);
+    padding-bottom: 40px;
+}
+.card__icon{
+    width: 100%;
+    height: 60px;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+.team{
+    grid-area: team;
+    border-top: 5px solid var(--red);
+}
+.supervisor{
+    grid-area: supervisor;
+    border-top: 5px solid var(--cyan);
+}
+.karma{
+    grid-area: karma;
+    border-top: 5px solid var(--orange);
+}
+.calculator{
+    grid-area: calculator;
+    border-top: 5px solid var(--blue);
 }
