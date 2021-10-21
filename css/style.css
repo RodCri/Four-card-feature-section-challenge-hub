@@ -98,3 +98,56 @@ span{
     grid-area: calculator;
     border-top: 5px solid var(--blue);
 }
+@media(max-width:1300px){
+    .cards{
+        gap: 20px 80px;
+    }   
+}
+@media (max-width: 1200px){
+    .cards{
+        width: 90%;
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 30px 20px; 
+        grid-template-areas: 
+          "team supervisor"
+          "karma calculator"; 
+              justify-items: center; 
+              align-items: center;       
+    }
+}
+@media(max-width: 780px){
+    .hero{
+        padding: 3em;
+    }
+    .hero__text{
+        width: 90%;
+    }
+    .cards{
+        padding: 0 0 3em 0;
+        width: 90%;
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(4, 1fr); 
+        row-gap: 20px;
+        grid-template-areas: 
+          "supervisor"
+          "team"
+          "karma"
+          "calculator"; 
+              justify-items: center; 
+              align-items: center;       
+    }
+}
+@media(max-width:460px){
+    body{
+        font-size: 12px;
+    }
+    .hero{
+        padding: 2em;
+    }
+    .hero__title{
+        font-size: .8em;
+    }
+}
